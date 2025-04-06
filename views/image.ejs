@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[url('https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600')] bg-gray-700 bg-blend-multiply">
+
+    <div class="mt-6">
+        <a href="/" class="ml-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Home</a>
+    </div>
+
+   <main class="flex flex-col justify-center items-center mt-5 gap-5">
+
+    <h1 class="text-3xl ml-5 text-white font-bold text-center">Your Images</h1>
+    <div id="imageContainer">
+        <% if (imageUrls && imageUrls.length > 0) { %>
+            <% imageUrls.forEach(image => { %>
+                <div style="margin: 10px;" class="flex flex-col justify-center">
+                    <a href="<%= image.img_url %>" target="_blank" class="ml-3 text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                        >View Image</a>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No images uploaded yet.</p>
+        <% } %>
+    </div>
+
+   </main>
+   
+   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>

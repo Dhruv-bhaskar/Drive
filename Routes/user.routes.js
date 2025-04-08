@@ -88,12 +88,16 @@ router.post('/login',
   )
 
      res.cookie('token',token)
-     res.redirect('/upload')
+     res.redirect('/user/loggedin')
   } 
 )
 
 router.get('/unauthorized',(req,res)=>{
   res.render('unauthorized')
+})
+
+router.get('/loggedin', (req,res)=>{
+  res.render('loggedIn')
 })
 
 

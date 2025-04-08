@@ -20,7 +20,7 @@
             <% imageUrls.forEach(image => { %>
                 <div style="margin: 10px;" class="flex flex-col justify-center">
                     <a href="<%= image.img_url %>" target="_blank" class="m-auto"
-                        ><img src="<%= image.img_url %>" alt="View image">
+                        ><img src="<%= image.img_url %>" alt="View image" class="max-h-xl max-w-xl">
                     </a>
                 </div>
             <% }); %>

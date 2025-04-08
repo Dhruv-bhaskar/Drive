@@ -19,8 +19,9 @@
         <% if (imageUrls && imageUrls.length > 0) { %>
             <% imageUrls.forEach(image => { %>
                 <div style="margin: 10px;" class="flex flex-col justify-center">
-                    <a href="<%= image.img_url %>" target="_blank" class="ml-3 text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-                        >View Image</a>
+                    <a href="<%= image.img_url %>" target="_blank" class="m-auto"
+                        ><img src="<%= image.img_url %>" alt="View image">
+                    </a>
                 </div>
             <% }); %>
         <% } else { %>

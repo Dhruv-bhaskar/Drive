@@ -9,16 +9,16 @@
   <body class="bg-[url('https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600')] bg-gray-700 bg-blend-multiply">
 
     <div class="mt-6">
-        <a href="/user/loggedin" class="ml-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Home</a>
+        <a href="/user/loggedin" class="transition duration-250 hover:bg-gray-500 ml-5 text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center">Home</a>
     </div>
 
-   <main class="flex flex-col justify-center items-center mt-5 gap-5">
+   <main>
 
     <h1 class="text-3xl ml-5 text-white font-bold text-center">Your Images</h1>
-    <div id="imageContainer">
+    <div id="imageContainer" class="flex flex-col justify-center items-center gap-1">
         <% if (imageUrls && imageUrls.length > 0) { %>
             <% imageUrls.forEach(image => { %>
-                <div style="margin: 10px;" class="flex flex-col justify-center">
+                <div style="margin: 10px;">
                     <a href="<%= image.img_url %>" target="_blank" class="m-auto"
                         ><img src="<%= image.img_url %>" alt="View image" class="max-h-xl max-w-xl">
                     </a>

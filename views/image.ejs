@@ -14,7 +14,7 @@
 
    <main>
 
-    <h1 class="text-3xl ml-5 text-white font-bold text-center">Your Images</h1>
+    <h1 class="sm:text-3xl ml-3 text-white font-bold text-center">Your Images</h1>
     <div id="imageContainer" class="flex flex-col justify-center items-center gap-1">
         <% if (imageUrls && imageUrls.length > 0) { %>
             <% imageUrls.forEach(image => { %>
@@ -25,7 +25,7 @@
                 </div>
             <% }); %>
         <% } else { %>
-            <p>No images uploaded yet.</p>
+            <p class="mt-30 text-2xl text-red-400 font-bold sm:text-3xl font-normal">No images uploaded yet.</p>
         <% } %>
     </div>
 
